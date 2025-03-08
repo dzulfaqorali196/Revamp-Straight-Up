@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- link the css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- link the icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- logo web-->
+    <link rel="shortcut icon" href="/img/logo/logo_B2V_icon.ico">
+    <!-- Scroll Reveal Library -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>StraightUp</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <a href="index.html" class="brand"><img src="/img/logo/logo.png" alt="logo"></a>
+      <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#services">Services</a>
+      </div>
+      <button
+        class="btn-2 btn-visible"
+        onclick="window.location.href='contact.html'"
+      >
+        Contact Us
+      </button>
+      <div class="btn">
+        <i class="fas fa-bars menu-btn"></i>
+      </div>
+    </header>
+    <!-- Navbar End -->
+
+    <!-- Contact Section -->
+    <section class="contact">
+      <img
+        src="img/gradient-blue.png"
+        alt="img"
+        class="gradient gradient-blue"
+      />
+      <img
+        src="img/gradient-light-blue.png"
+        alt="img"
+        class="gradient gradient-lightblue"
+      />
+
+      <h1 class="reveal-title">Get in Touch with StraightUp Together</h1>
+      <p class="reveal-text">
+        Whether you have questions about our services, want to discuss a
+        project, or just fancy a chat about all things digital, we're here and
+        ready to connect.
+      </p>
+
+      <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="reveal-form">
+        <input
+          type="hidden"
+          name="access_key"
+          value=""
+        />
+        <input type="text" name="name" id="name" placeholder="Name" required />
+        <span class="error" id="nameError"></span>
+        
+        <input type="text" name="contact number" id="contactNumber" placeholder="Contact No." required pattern="[0-9]*" inputmode="numeric" minlength="10"/>
+        <span class="error" id="contactNumberError"></span>
+        
+        <input type="email" name="email" id="email" placeholder="Email" required />
+        <span class="error" id="emailError"></span>
+        
+        <textarea
+          name="description"
+          id="description"
+          cols="30"
+          rows="10"
+          placeholder="What is on your mind"
+          required
+        ></textarea>
+        <span class="error" id="descriptionError"></span>
+      
+        <button type="submit" class="btn-2 btn-callout">
+          Contact Us <i class="fa-solid fa-arrow-up"></i>
+        </button>
+      </form>
+    </section>
+
+   <!-- Footer Section -->
+   <section class="footer">
+    <hr id="f-hr" class="reveal-hr"/>
+    <div class="footer-callout reveal-callout">
+      <a href="/">StraightUp</a>
+      <div>
+        <h5>Ready to get started?</h5>
+        <button
+          type="button"
+          class="btn-2 btn-callout"
+          onclick="window.location.href='contact.html'"
+        >
+          Contact Us <i class="fa-solid fa-arrow-up"></i>
+        </button>
+      </div>
+    </div>
+    <hr id="bf-hr" class="reveal-hr" />
+    <div class="bottom-footer reveal-bottom">
+      <div class="newsletter">
+        <p>Subscribe to our newsletter</p>
+        <form id="newsletter-form" action="https://api.web3forms.com/submit" method="POST">
+          <input
+            type="hidden"
+            name="access_key"
+            value=""
+          />
+          <input
+          type="hidden"
+          name="redirect"
+          value="https://web3forms.com/success"
+          />
+          <input
+            type="email"
+            name="email_newsletter"
+            id="email-input"
+            placeholder="Email Address"
+            required
+          />
+          <button type="submit"><i class="fa-solid fa-arrow-up"></i></button>
+        </form>
+        <div id="form-message" class="form-message"></div>
+      </div>
+      
+      <div class="footer-links">
+        <div class="footer-link">
+          <h6>Services</h6>
+          <div class="navigation">
+            <a>Tiktok Ads</a>
+            <a>Meta Ads</a>
+            <a>Shopee Iklanku</a>
+            <a>Content Production</a>
+            <a>Digital Marketing Strategy with Brief Content</a>
+          </div>
+        </div>
+        <div class="footer-link">
+          <h6>Navigation</h6>
+          <div class="navigation">
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#services">Services</a>
+          </div>
+        </div>
+        <div class="footer-link">
+          <h6>Help</h6>
+          <div class="navigation">
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr id="bf-hr" class="reveal-hr"/>
+
+    <div class="socials reveal-socials">
+      <div class="social-media">
+        <a class="social-box"><i class="fa-brands fa-facebook-f"></i></a>
+        <a class="social-box"><i class="fa-brands fa-x-twitter"></i></a>
+        <a class="social-box"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a class="social-box"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+      <p>@ 2024 All Rights Reserved</p>
+    </div>
+  </section>
+  <!-- Footer Section End-->
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/6282295560240?text=Hai%20StraightUp%20Digital" class="whatsapp-button" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <script src="config.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
