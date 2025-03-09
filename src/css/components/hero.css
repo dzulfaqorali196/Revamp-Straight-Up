@@ -1,0 +1,162 @@
+/* Hero Page Section */
+.hero-page {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light-cream);
+  z-index: 1;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.gradient {
+  width: 774px;
+  height: auto;
+  position: absolute;
+  opacity: 0.8;
+}
+
+.hero-page .gradient-v {
+  left: 290px;
+  top: 100px;
+}
+
+.hero-page .gradient-blue {
+  right: 0;
+  top: 100px;
+}
+
+.hero-page-headline {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 1072px;
+  margin: 100px 0px 0px 100px;
+  z-index: 1;
+}
+
+.hero-page-headline h1 {
+  font-size: 96px;
+  color: var(--bright-blue);
+}
+
+.hero-page-headline h2 {
+  color: var(--bright-blue);
+}
+
+.hero-page-headline p {
+  color: black;
+  font-style: italic;
+  font-size: 24px;
+  font-weight: 200;
+}
+
+.tagline {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.tagline h2 {
+  font-size: 96px;
+}
+
+.tagline-sub h3 {
+  font-size: 32px;
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* Button styles for hero section */
+.btn-blue {
+  background-color: var(--bright-blue);
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 30px;
+  align-self: flex-start;
+}
+
+.btn-blue:hover {
+  background-color: var(--bright-yellow);
+  color: var(--bright-blue);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries for Hero Section */
+@media (max-width: 1200px) {
+  .hero-page-headline {
+    width: 90%;
+    margin: 100px auto 0;
+  }
+  
+  .hero-page-headline h1 {
+    font-size: 72px;
+  }
+  
+  .btn-2 .btn-blue {
+    margin-top: 20px;
+  }
+  
+  .tagline h2 {
+    font-size: 72px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-page {
+    padding: 80px 0;
+  }
+  
+  .hero-page .gradient-v,
+  .hero-page .gradient-blue {
+    width: 100%;
+    height: auto;
+  }
+  
+  .hero-page .gradient-v {
+    left: 0;
+    top: 50px;
+  }
+  
+  .hero-page .gradient-blue {
+    right: -50%;
+    top: 50px;
+  }
+  
+  .hero-page-headline {
+    margin: 50px auto 0;
+  }
+  
+  .hero-page-headline h1 {
+    font-size: 48px;
+  }
+  
+  .tagline h2 {
+    font-size: 48px;
+  }
+  
+  .tagline-sub {
+    margin-top: 10px;
+  }
+  
+  .tagline-sub h3 {
+    font-size: 24px;
+  }
+  
+  .hero-page-headline p {
+    font-size: 18px;
+  }
+  
+  .btn-2 {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+} 

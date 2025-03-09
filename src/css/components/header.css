@@ -1,0 +1,202 @@
+/* Navbar */
+header {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 100px;
+  border-bottom: 1px rgba(255, 255, 255, 0) solid;
+  transition: all 0.5s ease-in-out;
+  background-color: var(--light-cream);
+  color: var(--bright-blue);
+}
+
+header.sticky {
+  background: var(--light-cream);
+  border-bottom: 1px rgba(0, 0, 0, 0.548) solid;
+  padding: 15px 100px;
+  z-index: 100000;
+}
+
+header .brand img{
+  height: 250px;
+  width: auto;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+header .brand:hover {
+  color: var(--bright-yellow);
+}
+
+header .menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header .menu a {
+  color: var(--bright-blue);
+  font-size: 24px;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 0 20px;
+  padding: 0 10px;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+header .menu a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  width: 100%;
+  height: 2px;
+  background: var(--bright-yellow);
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+  transform-origin: right;
+}
+
+header .menu a:hover {
+  color: var(--bright-yellow);
+}
+
+header .menu a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+header .btn {
+  color: var(--bright-blue);
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+
+.btn-2 {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px 20px;
+  background-color: var(--bright-blue);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-2:hover {
+  background-color: var(--bright-yellow);
+  color: var(--bright-blue);
+}
+
+.btn-2:focus {
+  outline: 2px solid var(--light-cream);
+}
+
+.btn-2:active {
+  transform: translateY(-50%) scale(0.98);
+}
+
+/* Media Queries for Header */
+@media (max-width: 1060px) {
+  header .btn {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  header .menu {
+    position: fixed;
+    background: var(--light-cream);
+    flex-direction: column;
+    min-width: 100%;
+    min-height: 100vh;
+    top: 0;
+    right: -100%;
+    padding: 80px 50px;
+    transition: 0.5s;
+    transition-property: right;
+    z-index: 998;
+  }
+
+  header .menu.active {
+    right: 0;
+  }
+
+  header .menu a {
+    display: block;
+    font-size: 20px;
+    margin: 20px;
+    padding: 0 15px;
+  }
+
+  header .menu a:last-child {
+    margin-bottom: 0;
+  }
+
+  header .menu a:hover {
+    color: var(--bright-yellow);
+  }
+
+  .btn-2.btn-visible {
+    display: none;
+  }
+
+  header .menu .btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: var(--bright-blue);
+  }
+
+  header .brand img {
+    height: 200px;
+  }
+  
+  header.sticky {
+    padding: 10px 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  header {
+    padding: 15px 20px;
+  }
+  
+  header.sticky {
+    padding: 10px 20px;
+  }
+  
+  header .brand img {
+    height: 150px;
+    left: 10px;
+  }
+  
+  header .menu {
+    padding: 60px 30px;
+  }
+  
+  header .menu a {
+    font-size: 18px;
+    margin: 15px;
+  }
+} 

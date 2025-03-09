@@ -1,0 +1,135 @@
+/* Utility Components */
+
+/* WhatsApp Button */
+.whatsapp-button {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Scroll To Top Button */
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--bright-blue);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+#scrollToTopBtn:hover{
+  background-color: var(--bright-yellow);
+  color: var(--bright-blue);
+}
+
+#scrollToTopBtn img {
+  width: 20px;
+  height: 20px;
+  transition: all 0.3s ease;
+}
+
+#scrollToTopBtn:hover img {
+  transform: translateY(-3px);
+}
+
+/* Progress Ring for Scroll To Top Button */
+.progress-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-90deg);
+}
+
+.progress-ring__circle {
+  stroke: var(--bright-yellow);
+  stroke-width: 3px;
+  fill: transparent;
+  r: 22px;
+  cx: 25px;
+  cy: 25px;
+  stroke-dasharray: 138.2;
+  stroke-dashoffset: 138.2;
+  transition: stroke-dashoffset 0.3s ease;
+}
+
+/* Form Message */
+.form-message {
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.form-message.error {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: var(--error-red);
+}
+
+.form-message.success {
+  background-color: rgba(0, 255, 0, 0.1);
+  color: var(--success-green);
+}
+
+/* Media Queries for Utility Components */
+@media (max-width: 768px) {
+  .whatsapp-button {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    bottom: 20px;
+    left: 20px;
+  }
+  
+  #scrollToTopBtn {
+    width: 40px;
+    height: 40px;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .progress-ring {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .progress-ring__circle {
+    r: 18px;
+    cx: 20px;
+    cy: 20px;
+    stroke-dasharray: 113.1;
+    stroke-dashoffset: 113.1;
+  }
+} 

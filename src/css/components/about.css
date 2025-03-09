@@ -1,0 +1,153 @@
+/* About Section */
+.about {
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--light-cream);
+}
+
+.about h1 {
+  font-size: 48px;
+  color: var(--bright-blue);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about-datas {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px 0;
+  text-align: center;
+}
+
+.about-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.about-data h4 {
+  font-size: 36px;
+  color: var(--bright-blue);
+}
+
+.about-data p {
+  font-size: 18px;
+}
+
+.about-datas hr {
+  border: none;
+  border-left: 1px solid #ddd;
+}
+
+.about-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  gap: 50px;
+  align-items: center;
+}
+
+.about-content{
+  flex: 1;
+}
+
+.about-headlines {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-headlines .btn-2{
+  align-self: flex-start;
+  position: static;
+  transform: none;
+}
+
+.about-headlines h1 {
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.about-headlines p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about .gradient-lightblue {
+  right: 0;
+  top: 100px;
+}
+
+.about .gradient-violet {
+  left: 0;
+  top: 300px;
+}
+
+/* Media Queries for About Section */
+@media (max-width: 1024px) {
+  .about-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .about-headlines {
+    text-align: center;
+  }
+  
+  .about-headlines .btn-2 {
+    align-self: center;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-headlines {
+    padding: 0 20px;
+  }
+  
+  .about-headlines .btn-2 {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .about .gradient-lightblue {
+    width: 100%;
+  }
+  
+  .about .gradient-violet {
+    width: 100%;
+  }
+  
+  .about-datas {
+    flex-direction: column;
+  }
+  
+  .about-data h4 {
+    font-size: 30px;
+  }
+  
+  .about-data p {
+    font-size: 16px;
+  }
+  
+  .about-container {
+    padding: 0;
+  }
+} 
